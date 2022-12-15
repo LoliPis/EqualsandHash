@@ -13,7 +13,7 @@ public class Main {
         Product bananas = new Product("Бананы", 120f, 1f);
         Product oranges = new Product("Апельсины", 150f, 2f);
         Product cucumbers = new Product("Огурцы", 1230f, 2f);
-       ShopList shopListFirst  = new ShopList();
+        ShopList shopListFirst  = new ShopList();
         ShopList shopListSec  = new ShopList();
         ShopList shopListThird  = new ShopList();
         shopListFirst.addNewProduct(bananas);
@@ -21,8 +21,8 @@ public class Main {
         shopListFirst.addNewProduct(cucumbers);
         shopListSec.purchaseProduct(oranges);
         shopListThird.deleteProduct(cucumbers);
-//        shopListFirst.addNewProduct(bananas);
-//        //Дз 2
+        //shopListFirst.addNewProduct(bananas);
+        //Дз 2
         Recipe recipe1 = new Recipe("recipe1");
         recipe1.addProductToRecipe(bananas);
         System.out.println(recipe1.toString());
@@ -39,7 +39,7 @@ public class Main {
         RecipeBook recipeBook1 = new RecipeBook();
         recipeBook1.addNewRecipe(recipe1);
         recipeBook1.addNewRecipe(recipe2);
-        recipeBook1.addNewRecipe(recipe3);
+        //recipeBook1.addNewRecipe(recipe3);
         // Дз 2
         // Задание 2
         int initialCapacity = 20;
@@ -53,7 +53,7 @@ public class Main {
         //Задание 2
         Set<String>  multiplicationTasks = new HashSet<>();
         int questionCount = 15;
-        while (multiplicationTasks.size() < 15) {
+        while (multiplicationTasks.size() < questionCount) {
             int firstNum = (int) (2 + 8 * Math.random());
             int secondNum = (int) (2 + 8 * Math.random());
             if (!multiplicationTasks.contains(String.format("%d x %d =", secondNum, firstNum))) {
@@ -87,5 +87,22 @@ public class Main {
         будет затрачивать больше ресурсов - соответственно потребуется больше времени на сравнение этих данных друг с
         другом
          */
+
+        //Коллекции. 2 урок
+        //Задание 2
+        Recipe recipe4 = new Recipe("recipe4");
+        recipe4.addProductToRecipe(bananas, 2);
+        System.out.println(recipe4.toString());
+        recipe4.addProductToRecipe(oranges, 3);
+        System.out.println(recipe4.toString());
+        recipe4.addProductToRecipe(cucumbers);
+        System.out.println(recipe4.toString());
+        Recipe recipe5 = new Recipe("recipe5");
+        recipe5.addProductToRecipe(oranges);
+        System.out.println(recipe5.toString());
+        recipe5.addProductToRecipe(cucumbers);
+        recipe5.addProductToRecipe(bananas);
+
+
     }
 }
